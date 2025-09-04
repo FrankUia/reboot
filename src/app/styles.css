@@ -58,14 +58,14 @@ body {
 }
 
 .main {
-  padding: 8rem 2rem 4rem;
+  padding: 4rem 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .title {
@@ -215,7 +215,7 @@ body {
 .footer {
   text-align: center;
   color: var(--text-secondary);
-  padding: 2rem;
+  padding: 0.5rem;
   border-top: 1px solid var(--border-color);
 }
 
@@ -232,7 +232,6 @@ body {
   background: var(--card-bg);
   border-radius: 1rem;
   border: 1px solid var(--border-color);
-  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
