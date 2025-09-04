@@ -58,7 +58,7 @@ body {
 }
 
 .main {
-  padding: 8rem 2rem 4rem;
+  padding: 4rem 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -146,7 +146,7 @@ body {
 .footer {
   text-align: center;
   color: var(--text-secondary);
-  padding: 2rem;
+  padding: 1rem;
   border-top: 1px solid var(--border-color);
 }
 
