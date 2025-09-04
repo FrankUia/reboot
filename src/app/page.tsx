@@ -1,5 +1,5 @@
-import './styles.css';
-import Image from 'next/image';
+import "./styles.css";
+import Image from "next/image";
 
 export default function Home() {
   const teamMembers = [
@@ -7,13 +7,15 @@ export default function Home() {
       name: "Medlem 1",
       role: "Rolle",
       image: "/medlem_bilder/Frank.jpg",
-      description: "Din bakgrunn, tekniske interesser og ambisjon for bachelorprosjektet...",
+      description:
+        "Din bakgrunn, tekniske interesser og ambisjon for bachelorprosjektet...",
     },
     {
-      name: "Medlem 2",
+      name: "Jon Engravslia Aarebakk",
       role: "Rolle",
-      image: "/medlem_bilder/member2.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
+      image: "/medlem_bilder/Jon.jpg",
+      description:
+        "Spesielt interessert i systemutvikling, systemarkitektur, backend-utvikling og volleyball. Jeg har mest erfaring med web-dev.",
     },
     {
       name: "Kata-Loore Tamm",
@@ -28,10 +30,10 @@ export default function Home() {
       description: "Kort beskrivelse om din bakgrunn og interesser...",
     },
     {
-      name: "Medlem 5",
-      role: "Rolle",
-      image: "/medlem_bilder/member5.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
+      name: "Jørgen",
+      role: "Rolle: Databasesystem Administrator",
+      image: "/medlem_bilder/JørgenMango.jpg",
+      description: "Interesse for databasesystemer, og backend utvikling i C#.",
     },
   ];
 
@@ -41,9 +43,15 @@ export default function Home() {
         <div className="nav-content">
           <span className="nav-brand">Bachelorprosjekt</span>
           <div className="nav-links">
-            <a href="#hjem" className="nav-link">Hjem</a>
-            <a href="#team" className="nav-link">Vårt Team</a>
-            <a href="#about" className="nav-link">Om Prosjektet</a>
+            <a href="#hjem" className="nav-link">
+              Hjem
+            </a>
+            <a href="#team" className="nav-link">
+              Vårt Team
+            </a>
+            <a href="#about" className="nav-link">
+              Om Prosjektet
+            </a>
           </div>
         </div>
       </nav>
@@ -51,7 +59,10 @@ export default function Home() {
       <main className="main">
         <header className="header">
           <h1 className="title">Bachelorprosjekt 2025</h1>
-          <p>Vi er en gruppe på 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.</p>
+          <p>
+            Vi er en gruppe på 5 studenter som sammen skal gjennomføre vårt
+            bachelorprosjekt ved Universitetet i Agder.
+          </p>
         </header>
 
         <section id="team" className="team-grid">
