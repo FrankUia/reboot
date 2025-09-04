@@ -11,10 +11,11 @@ export default function Home() {
         "Din bakgrunn, tekniske interesser og ambisjon for bachelorprosjektet...",
     },
     {
-      name: "Medlem 2",
+      name: "Jon Engravslia Aarebakk",
       role: "Rolle",
-      image: "/medlem_bilder/member2.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
+      image: "/medlem_bilder/Jon.jpg",
+      description:
+        "Spesielt interessert i systemutvikling, systemarkitektur, backend-utvikling og volleyball. Jeg har mest erfaring med web-dev.",
     },
     {
       name: "Medlem 3",
