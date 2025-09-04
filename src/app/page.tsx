@@ -22,10 +22,10 @@ export default function Home() {
       description: "Kort beskrivelse om din bakgrunn og interesser...",
     },
     {
-      name: "Medlem 4",
+      name: "Stine",
       role: "Rolle",
-      image: "/medlem_bilder/member4.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
+      image: "/medlem_bilder/stine.JPEG",
+      description: "26 år, har fra tidligere en bachelor i sykepleie. Mine interresser er systemutvikling, databaser, UX design og frontend.",
     },
     {
       name: "Medlem 5",
