@@ -8,36 +8,37 @@ export default function Home() {
       image: "/medlem_bilder/Frank.jpg",
       description:
         "Brenner for backend-utvikling og systemarkitektur, med særlig interesse for programmering i Python",
-      linkedin: "https://linkedin.com/in/your-profile", // Replace with your LinkedIn URL
-      github: "https://github.com/your-username", // Replace with your GitHub URL
+      linkedin: "https://www.linkedin.com/in/frank-hovet/",
+      github: "https://github.com/FrankUia",
     },
     {
       name: "Jon Engravslia Aarebakk",
       image: "/medlem_bilder/Jon.jpg",
       description:
         "Spesielt interessert i systemutvikling, systemarkitektur, backend-utvikling og volleyball. Jeg har mest erfaring med web-dev.",
-      linkedin: "https://linkedin.com/in/your-profile", // Replace with your LinkedIn URL
-      github: "https://github.com/your-username", // Replace with your GitHub URL
+      linkedin: "https://www.linkedin.com/in/jon-engravslia-aarebakk/",
+      github: "https://github.com/JonAarebakk",
     },
     {
       name: "Kata-Loore Tamm",
-      role: "Rolle",
       image: "/medlem_bilder/Kata.png",
       description: "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
+      linkedin: "https://www.linkedin.com/in/katalooretamm",
+      github: "https://github.com/KataLoore",
     },
     {
       name: "Stine",
-      role: "Rolle",
       image: "/medlem_bilder/stine.JPEG",
       description: "26 år, har fra tidligere en bachelor i sykepleie. Mine interresser er systemutvikling, databaser, UX design og frontend.",
-
+      linkedin: "https://www.linkedin.com/in/stine-strand",
+      github: "https://github.com/stinest-uia",
     },
     {
       name: "Jørgen",
       image: "/medlem_bilder/JørgenMango.jpg",
       description: "Interesse for databasesystemer, og backend utvikling i C#.",
-      linkedin: "https://linkedin.com/in/your-profile", // Replace with your LinkedIn URL
-      github: "https://github.com/your-username", // Replace with your GitHub URL
+      linkedin: "https://www.linkedin.com/in/j%C3%B8rgen-ege-893063369/?originalSubdomain=no", 
+      github: "https://github.com/JorgenEge",
     },
   ];
 
