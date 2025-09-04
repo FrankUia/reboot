@@ -20,18 +20,17 @@ export default function Home() {
       github: "https://github.com/your-username", // Replace with your GitHub URL
     },
     {
-      name: "Medlem 3",
-      image: "/medlem_bilder/member3.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
-      linkedin: "https://linkedin.com/in/your-profile", // Replace with your LinkedIn URL
-      github: "https://github.com/your-username", // Replace with your GitHub URL
+      name: "Kata-Loore Tamm",
+      role: "Rolle",
+      image: "/medlem_bilder/Kata.png",
+      description: "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
     },
     {
-      name: "Medlem 4",
-      image: "/medlem_bilder/member4.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
-      linkedin: "https://linkedin.com/in/your-profile", // Replace with your LinkedIn URL
-      github: "https://github.com/your-username", // Replace with your GitHub URL
+      name: "Stine",
+      role: "Rolle",
+      image: "/medlem_bilder/stine.JPEG",
+      description: "26 år, har fra tidligere en bachelor i sykepleie. Mine interresser er systemutvikling, databaser, UX design og frontend.",
+
     },
     {
       name: "Jørgen",
