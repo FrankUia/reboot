@@ -133,7 +133,6 @@ export default function Home() {
             </div>
           ))}
         </section>
-
         <section id="about" className="about-section">
           <h2 className="title">Om Oss</h2>
           <p className="textarea">
