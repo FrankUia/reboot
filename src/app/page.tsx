@@ -16,10 +16,10 @@ export default function Home() {
       description: "Kort beskrivelse om din bakgrunn og interesser...",
     },
     {
-      name: "Medlem 3",
+      name: "Kata-Loore Tamm",
       role: "Rolle",
-      image: "/medlem_bilder/member3.jpg",
-      description: "Kort beskrivelse om din bakgrunn og interesser...",
+      image: "/medlem_bilder/Kata.png",
+      description: "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
     },
     {
       name: "Medlem 4",
