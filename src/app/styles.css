@@ -1,7 +1,7 @@
 :root {
   --bg-dark: #0d1117;
   --text-primary: #ffffff;
-  --text-secondary: #8b949e;
+  --text-secondary: #d1d9e0;
   --accent: #f0f6fc;
   --card-bg: rgba(22, 27, 34, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
@@ -201,15 +201,9 @@ body {
   padding: 1rem;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: inherit;
   resize: none;
-}
-
-.textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  opacity: 0.4;
 }
 
 .footer {
@@ -243,7 +237,7 @@ body {
 .about-section .textarea {
   width: 90%;
   min-height: 200px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;

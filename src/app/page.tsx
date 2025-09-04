@@ -22,14 +22,16 @@ export default function Home() {
     {
       name: "Kata-Loore Tamm",
       image: "/medlem_bilder/Kata.png",
-      description: "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
+      description:
+        "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
       linkedin: "https://www.linkedin.com/in/katalooretamm",
       github: "https://github.com/KataLoore",
     },
     {
       name: "Stine",
       image: "/medlem_bilder/stine.JPEG",
-      description: "26 år, har fra tidligere en bachelor i sykepleie. Mine interresser er systemutvikling, databaser, UX design og frontend.",
+      description:
+        "26 år, har fra tidligere en bachelor i sykepleie. Mine interresser er systemutvikling, databaser, UX design og frontend.",
       linkedin: "https://www.linkedin.com/in/stine-strand",
       github: "https://github.com/stinest-uia",
     },
@@ -37,7 +39,8 @@ export default function Home() {
       name: "Jørgen",
       image: "/medlem_bilder/JørgenMango.jpg",
       description: "Interesse for databasesystemer, og backend utvikling i C#.",
-      linkedin: "https://www.linkedin.com/in/j%C3%B8rgen-ege-893063369/?originalSubdomain=no", 
+      linkedin:
+        "https://www.linkedin.com/in/j%C3%B8rgen-ege-893063369/?originalSubdomain=no",
       github: "https://github.com/JorgenEge",
     },
   ];
@@ -132,12 +135,19 @@ export default function Home() {
         </section>
 
         <section id="about" className="about-section">
-          <h2 className="title">Om gruppen</h2>
-          <textarea
-            className="textarea"
-            placeholder="Beskriv gruppen, gruppens mål og ambisjoner, teknologivalg, og eventuelle samarbeidspartnere..."
-            rows={8}
-          />
+          <h2 className="title">Om Oss</h2>
+          <p className="textarea">
+            Vi er en gjeng med studenter som har samarbeidet gjennom store deler
+            av bacheloren. Våre felles verdier er viktige for oss; respekt for
+            hverandre, engasjement i prosjektarbeid, nysgjerrighet og ikke minst
+            god humor skaper et sterkt samhold som gjør at vi trives godt
+            sammen. Vi legger vekt på samarbeid og problemløsning, og vi er
+            overbevist om at vi får til mer når vi spiller hverandre gode. Hver
+            av oss har ulike styrker og interesser. Noen foretrekker
+            effektivitet og iterativt arbeid, mens andre legger vekt på
+            grundighet fra steg en. Det er forskjellene våre som styrker teamet
+            og gjør at vi kontinuerlig lærer av hverandre.
+          </p>
         </section>
       </main>
 
