@@ -49,9 +49,10 @@ export default function Home() {
       </nav>
 
       <main className="main">
-        <header className="header">
+    <div id="hjem"></div>
+    <header className="header">
           <h1 className="title">Bachelorprosjekt 2025</h1>
-          <p>Vi er en gruppe på 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.</p>
+          <p>Vi er gruppe 16 og består av 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.</p>
         </header>
 
         <section id="team" className="team-grid">
