@@ -7,8 +7,19 @@ import modalStyles from './styles/Modal.module.css';
 import cardStyles from './styles/InfoCards.module.css';
 import separatorStyles from './styles/Separators.module.css';
 
+interface TeamMember {
+  name: string;
+  image: string;
+  description: string;
+  linkedin: string;
+  github: string;
+  tidligere_prosjekter: string[];
+  praksisplasser: string[];
+  teknologier: string[];
+}
+
 export default function Home() {
-  const [selectedMember, setSelectedMember] = useState<any>(null);
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   const teamMembers = [
     {
