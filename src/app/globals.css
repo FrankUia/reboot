@@ -1,0 +1,128 @@
+/* Global CSS Variables */
+:root {
+  --bg-dark: #0d1117;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d9e0;
+  --accent: #00aeff;
+  --card-bg: rgba(22, 27, 34, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Main Layout */
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+  width: calc(100vw - 250px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content > * {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content-section {
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--text-primary);
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about-section {
+  padding: 4rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-section .textarea {
+  width: 85%;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Link Indicators for Sidebar */
+.link-indicator {
+  width: 3px;
+  height: 20px;
+  background: transparent;
+  margin-right: 0.5rem;
+  border-radius: 0 3px 3px 0;
+  transition: all 0.2s ease;
+}
+
+/* Global Media Queries */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+  
+  .app-container {
+    flex-direction: column;
+  }
+}
