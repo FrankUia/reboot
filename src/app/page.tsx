@@ -72,9 +72,9 @@ export default function Home() {
       description: "Interesse for databasesystemer, og backend utvikling i C#.",
       linkedin: "https://www.linkedin.com/in/j%C3%B8rgen-ege-893063369/?originalSubdomain=no",
       github: "https://github.com/JorgenEge",
-      tidligere_prosjekter: ["Skibidi CRM System", "Ohio Gyatt Database"],
-      praksisplasser: ["Sigma Tech Solutions", "Rizz Backend Studios"],
-      teknologier: ["Skibidi#", "Ohio.NET", "Sigma SQL", "Gyatt Azure"]
+      tidligere_prosjekter: ["Prosjekt 1", "Prosjekt 2"],
+      praksisplasser: ["Bedrift A", "Bedrift B"],
+      teknologier: ["Teknologi 1", "Teknologi 2", "Teknologi 3"]
     },
   ];
 
