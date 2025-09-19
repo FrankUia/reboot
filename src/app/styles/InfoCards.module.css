@@ -193,6 +193,15 @@
   transform: scale(1.1);
 }
 
+.contactIcon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(180deg) brightness(119%) contrast(119%);
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover .contactIcon {
+  transform: scale(1.1);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .infoCards {
