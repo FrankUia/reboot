@@ -113,8 +113,8 @@ export default function Home() {
     },
     {
       name: "Jørgen",
-      image: "/medlem_bilder/JørgenMango.jpg",
-      description: "Interesse for databasesystemer, og backend utvikling i C#.",
+      image: "/medlem_bilder/Jørgen.jpg",
+      description: "28 år, har tidligere bachelor i psykologi. Interesse for databasesystemer, og backend utvikling i C#. Lærer meg Python for øyeblikket.",
       linkedin: "https://www.linkedin.com/in/j%C3%B8rgen-ege-893063369/?originalSubdomain=no",
       github: "https://github.com/JorgenEge",
       email: "jorgee17@uia.no",
