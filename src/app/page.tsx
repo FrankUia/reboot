@@ -44,6 +44,11 @@ export default function Home() {
       alt: "TechPoint konferanse 2025",
       description: "En fornøyd gjeng på Techpoint!"
     },
+    { 
+      src: "/gallery/cryptography.jpg", 
+      alt: "IS-214 Cryptography Competition 2025",
+      description: "Gruppen får utdelt premie for førsteplass under kryptografi-konkurransen i faget IS-214"
+    },
 
   ];
 
