@@ -111,16 +111,16 @@ export default function Home() {
         "Trives best med prosjekter som involverer hele utviklingsløpet, fra planlegging og databasedesign til implementering av backend og utvikling av frontend.",
       linkedin: "https://www.linkedin.com/in/katalooretamm",
       github: "https://github.com/KataLoore",
-      email: "kata.tamm@example.com",
-      phone: "+47 555 12 345",
+      email: "katalooret@uia.no",
+      phone: "",
       tidligere_prosjekter: [
         {
           name: "Gruppe 6 Kartverket",
           href: "https://github.com/JonAarebakk/Gruppe6_kartverket",
         },
       ],
-      praksisplasser: ["Bedrift A", "Bedrift B"],
-      teknologier: ["Teknologi 1", "Teknologi 2", "Teknologi 3"],
+      praksisplasser: ["Phonero"],
+      teknologier: ["PHP", "Python", "PostgreSQL", ".NET"],
     },
     {
       name: "Stine",
