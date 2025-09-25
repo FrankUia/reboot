@@ -111,10 +111,9 @@ export default function Home() {
       linkedin: "https://www.linkedin.com/in/stine-strand",
       github: "https://github.com/stinest-uia",
       email: "stinestr@uia.no",
-      phone: "",
       tidligere_prosjekter: ["Prosjekt 1", "Prosjekt 2"],
-      praksisplasser: ["Bedrift A", "Bedrift B"],
-      teknologier: ["Teknologi 1", "Teknologi 2", "Teknologi 3"]
+      praksisplasser: ["Phonero - IT og utvikling"],
+      teknologier: ["HTML og CSS", "React", "MVC ASP.NET", "PostgreSQL"]
     },
     {
       name: "Jørgen",
