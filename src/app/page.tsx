@@ -35,7 +35,7 @@ export default function Home() {
       description: "En gjeng som lar seg inspirere på konferanse!"
     },
     { 
-      src: "/gallery/techpoint2.jpg", 
+      src: "/gallery/techpoint2.jpg",
       alt: "TechPoint konferanse 2025",
       description: "Fullt fokus og god stemning på konferansen! (Vi tok oss noen kreative friheter, Frank var syk den dagen 😉)"
     },
@@ -150,7 +150,7 @@ export default function Home() {
       const sectionScrollPercent = (scrollTop / (docHeight || 1)) * 100;
       
       if (sectionScrollPercent > 75) {
-        currentSection = 'veien-videre';  // Bottom = future plans section
+        currentSection = 'kontakt';  // Bottom = contact section
       } else if (sectionScrollPercent > 55) {
         currentSection = 'about';  // About section
       } else if (sectionScrollPercent > 25) {
@@ -179,7 +179,15 @@ export default function Home() {
     <div className="app-container">
       <nav className={sidebarStyles.sidebar}>
         <div className={sidebarStyles.sidebarContent}>
-          <div className={sidebarStyles.sidebarBrand}>Bachelorprosjekt</div>
+          <div className={sidebarStyles.sidebarBrand}>
+            <Image
+              src="/reboot.png"
+              alt="Reboot Logo"
+              width={120}
+              height={40}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
           <div className={sidebarStyles.sidebarNavigation}>
             <div className={sidebarStyles.scrollProgress}>
               <div className={sidebarStyles.progressBar}></div>
@@ -197,9 +205,9 @@ export default function Home() {
                 <span className="link-indicator"></span>
                 Om oss
               </a>
-              <a href="#veien-videre" className={sidebarStyles.sidebarLink} data-section="veien-videre">
+              <a href="#kontakt" className={sidebarStyles.sidebarLink} data-section="kontakt">
                 <span className="link-indicator"></span>
-                Veien videre
+                Kontakt oss
               </a>
             </div>
           </div>
@@ -209,9 +217,20 @@ export default function Home() {
       <main className="main-content">
         <div id="hjem"></div>
         <header className="header">
-          <h1 className="title">Bachelorprosjekt 2025</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem' }}>
+            <Image
+              src="/reboot.png"
+              alt="Bachelorprosjekt 2025"
+              width={500}
+              height={200}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
 
-          <p>Vi er gruppe 16 og består av 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.</p>
+
+          <p style={{ fontSize: '1.4rem', lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
+            Vi er gruppe 16 og består av 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.
+          </p>
 
         </header>
 
@@ -402,7 +421,7 @@ export default function Home() {
             <div className={separatorStyles.separatorDot}></div>
             <div className={separatorStyles.separatorLine}></div>
           </div>
-          <p className="textarea">
+          <p className="textarea" style={{ fontSize: '1.3rem', lineHeight: '1.8', maxWidth: '900px' }}>
             Vi er en gjeng med studenter som har samarbeidet gjennom store deler
             av bacheloren. Våre felles verdier er viktige for oss; respekt for
             hverandre, engasjement i prosjektarbeid, nysgjerrighet og ikke minst
@@ -416,6 +435,7 @@ export default function Home() {
           </p>
         </section>
 
+        {/* Commented out Veien videre section - kept for future reference
         <section id="veien-videre" className="content-section">
           <h2 className="title">Veien videre</h2>
           <div className={separatorStyles.variantFuture}>
@@ -454,6 +474,65 @@ export default function Home() {
               </div>
               <h3>Placeholder Tittel 3</h3>
               <p>Dette er placeholder tekst for arbeidslivet og karriere. Innhold kommer senere.</p>
+            </div>
+          </div>
+        </section>
+        */}
+
+        <section id="kontakt" className="content-section">
+          <h2 className="title">Kontakt oss</h2>
+          <div className={separatorStyles.titleSeparator}>
+            <div className={separatorStyles.separatorLine}></div>
+            <div className={separatorStyles.separatorDot}></div>
+            <div className={separatorStyles.separatorLine}></div>
+          </div>
+          
+          <div style={{ 
+            background: 'var(--card-bg)', 
+            borderRadius: '1rem', 
+            padding: '3rem', 
+            border: '1px solid var(--border-color)',
+            backdropFilter: 'blur(8px)',
+            maxWidth: '700px',
+            margin: '2rem auto',
+            textAlign: 'center'
+          }}>
+            <div style={{ marginBottom: '2rem' }}>
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="var(--accent)" style={{ marginBottom: '1rem' }}>
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            
+            <p style={{ 
+              fontSize: '1.3rem', 
+              lineHeight: '1.8', 
+              color: 'var(--text-secondary)', 
+              marginBottom: '2rem'
+            }}>
+              Er du interessert i å vite mer eller har noen spørsmål?
+            </p>
+            
+            <div style={{ 
+              background: 'rgba(0, 208, 132, 0.1)', 
+              border: '1px solid rgba(0, 208, 132, 0.3)',
+              borderRadius: '0.75rem',
+              padding: '1.5rem',
+              display: 'inline-block'
+            }}>
+              <p style={{ margin: '0', fontSize: '1.2rem', fontWeight: '600' }}>
+                Kontakt: 
+                <a 
+                  href="mailto:stinestr@uia.no" 
+                  style={{ 
+                    color: 'var(--accent)', 
+                    textDecoration: 'none',
+                    marginLeft: '0.5rem',
+                    fontSize: '1.3rem'
+                  }}
+                >
+                  stinestr@uia.no
+                </a>
+              </p>
             </div>
           </div>
         </section>
