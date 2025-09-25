@@ -115,6 +115,8 @@
 .memberImage {
   object-fit: cover;
   transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .teamMember:hover .memberImage {
@@ -194,7 +196,7 @@
 }
 
 .contactIcon {
-  filter: brightness(0) saturate(100%) invert(64%) sepia(76%) saturate(506%) hue-rotate(120deg) brightness(94%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(65%) sepia(98%) saturate(386%) hue-rotate(103deg) brightness(98%) contrast(103%);
   transition: transform 0.3s ease;
 }
 

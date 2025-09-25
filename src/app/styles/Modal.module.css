@@ -26,6 +26,28 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+/* Custom scrollbar for modal content */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent), rgba(0, 208, 132, 0.7));
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(0, 208, 132, 0.9), var(--accent));
+  box-shadow: 0 2px 8px rgba(0, 208, 132, 0.3);
+}
+
 .modalClose {
   position: absolute;
   top: 1rem;
@@ -68,6 +90,8 @@
   border-radius: 50%;
   border: 2px solid var(--accent);
   object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .modalTitle {
@@ -190,6 +214,28 @@
   position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
+}
+
+/* Custom scrollbar for enhanced modal */
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent), rgba(0, 208, 132, 0.7));
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(0, 208, 132, 0.9), var(--accent));
+  box-shadow: 0 2px 8px rgba(0, 208, 132, 0.3);
 }
 
 .closeButton {
