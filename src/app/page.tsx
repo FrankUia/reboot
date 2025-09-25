@@ -23,7 +23,6 @@ interface TeamMember {
 
 export default function Home() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
-  const [contactMember, setContactMember] = useState<TeamMember | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [modalImageIndex, setModalImageIndex] = useState<number | null>(null);
 
@@ -142,8 +141,8 @@ export default function Home() {
           href: "https://stine060199.myportfolio.com/",
         },
       ],
-      praksisplasser: ["Bedrift A", "Bedrift B"],
-      teknologier: ["Teknologi 1", "Teknologi 2", "Teknologi 3"],
+      praksisplasser: ["Phonero - IT og utvikling"],
+      teknologier: ["HTML og CSS", "React", "MVC ASP.NET", "PostgreSQL"],
     },
     {
       name: "Jørgen",
@@ -190,7 +189,7 @@ export default function Home() {
       const sectionScrollPercent = (scrollTop / (docHeight || 1)) * 100;
 
       if (sectionScrollPercent > 75) {
-        currentSection = "veien-videre"; // Bottom = future plans section
+        currentSection = 'kontakt';  // Bottom = contact section
       } else if (sectionScrollPercent > 55) {
         currentSection = "about"; // About section
       } else if (sectionScrollPercent > 25) {
@@ -223,7 +222,15 @@ export default function Home() {
     <div className="app-container">
       <nav className={sidebarStyles.sidebar}>
         <div className={sidebarStyles.sidebarContent}>
-          <div className={sidebarStyles.sidebarBrand}>Bachelorprosjekt</div>
+          <div className={sidebarStyles.sidebarBrand}>
+            <Image
+              src="/reboot.png"
+              alt="Reboot Logo"
+              width={120}
+              height={40}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
           <div className={sidebarStyles.sidebarNavigation}>
             <div className={sidebarStyles.scrollProgress}>
               <div className={sidebarStyles.progressBar}></div>
@@ -253,13 +260,9 @@ export default function Home() {
                 <span className="link-indicator"></span>
                 Om oss
               </a>
-              <a
-                href="#veien-videre"
-                className={sidebarStyles.sidebarLink}
-                data-section="veien-videre"
-              >
+              <a href="#kontakt" className={sidebarStyles.sidebarLink} data-section="kontakt">
                 <span className="link-indicator"></span>
-                Veien videre
+                Kontakt oss
               </a>
             </div>
           </div>
@@ -269,12 +272,20 @@ export default function Home() {
       <main className="main-content">
         <div id="hjem"></div>
         <header className="header">
-          <h1 className="title">Bachelorprosjekt 2025</h1>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '2rem' }}>
+            <Image
+              src="/reboot.png"
+              alt="Bachelorprosjekt 2025"
+              width={500}
+              height={200}
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
 
-          <p>
-            Vi er gruppe 16 og består av 5 studenter som sammen skal gjennomføre
-            vårt bachelorprosjekt ved Universitetet i Agder.
+          <p style={{ fontSize: '1.4rem', lineHeight: '1.8', maxWidth: '900px', margin: '0 auto' }}>
+            Vi er gruppe 16 og består av 5 studenter som sammen skal gjennomføre vårt bachelorprosjekt ved Universitetet i Agder.
           </p>
+
         </header>
 
         <section id="team" className={cardStyles.teamContainer}>
@@ -291,6 +302,8 @@ export default function Home() {
                     alt={`${member.name}'s profile`}
                     fill
                     className={cardStyles.memberImage}
+                    quality={95}
+                    priority
                   />
                 ) : (
                   <div className={cardStyles.memberImage}>
@@ -338,7 +351,7 @@ export default function Home() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setContactMember(member);
+                    setSelectedMember(member);
                   }}
                   className={cardStyles.socialLink}
                   title="Kontakt informasjon"
@@ -368,6 +381,8 @@ export default function Home() {
                       alt={`${member.name}'s profile`}
                       fill
                       className={cardStyles.memberImage}
+                      quality={95}
+                      priority
                     />
                   ) : (
                     <div className={cardStyles.memberImage}>
@@ -415,7 +430,7 @@ export default function Home() {
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      setContactMember(member);
+                      setSelectedMember(member);
                     }}
                     className={cardStyles.socialLink}
                     title="Kontakt informasjon"
@@ -478,7 +493,7 @@ export default function Home() {
             <div className={separatorStyles.separatorDot}></div>
             <div className={separatorStyles.separatorLine}></div>
           </div>
-          <p className="textarea">
+          <p className="textarea" style={{ fontSize: '1.3rem', lineHeight: '1.8', maxWidth: '900px' }}>
             Vi er en gjeng med studenter som har samarbeidet gjennom store deler
             av bacheloren. Våre felles verdier er viktige for oss; respekt for
             hverandre, engasjement i prosjektarbeid, nysgjerrighet og ikke minst
@@ -492,6 +507,7 @@ export default function Home() {
           </p>
         </section>
 
+        {/* Commented out Veien videre section - kept for future reference
         <section id="veien-videre" className="content-section">
           <h2 className="title">Veien videre</h2>
           <div className={separatorStyles.variantFuture}>
@@ -562,6 +578,65 @@ export default function Home() {
             </div>
           </div>
         </section>
+        */}
+
+        <section id="kontakt" className="content-section">
+          <h2 className="title">Kontakt oss</h2>
+          <div className={separatorStyles.titleSeparator}>
+            <div className={separatorStyles.separatorLine}></div>
+            <div className={separatorStyles.separatorDot}></div>
+            <div className={separatorStyles.separatorLine}></div>
+          </div>
+          
+          <div style={{ 
+            background: 'var(--card-bg)', 
+            borderRadius: '1rem', 
+            padding: '3rem', 
+            border: '1px solid var(--border-color)',
+            backdropFilter: 'blur(8px)',
+            maxWidth: '700px',
+            margin: '2rem auto',
+            textAlign: 'center'
+          }}>
+            <div style={{ marginBottom: '2rem' }}>
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="var(--accent)" style={{ marginBottom: '1rem' }}>
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            
+            <p style={{ 
+              fontSize: '1.3rem', 
+              lineHeight: '1.8', 
+              color: 'var(--text-secondary)', 
+              marginBottom: '2rem'
+            }}>
+              Er du interessert i å vite mer eller har noen spørsmål?
+            </p>
+            
+            <div style={{ 
+              background: 'rgba(0, 208, 132, 0.1)', 
+              border: '1px solid rgba(0, 208, 132, 0.3)',
+              borderRadius: '0.75rem',
+              padding: '1.5rem',
+              display: 'inline-block'
+            }}>
+              <p style={{ margin: '0', fontSize: '1.2rem', fontWeight: '600' }}>
+                Kontakt: 
+                <a 
+                  href="mailto:stinestr@uia.no" 
+                  style={{ 
+                    color: 'var(--accent)', 
+                    textDecoration: 'none',
+                    marginLeft: '0.5rem',
+                    fontSize: '1.3rem'
+                  }}
+                >
+                  stinestr@uia.no
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
 
         <footer className="footer">
           <p>© 2025 Bachelorprosjekt - Universitetet i Agder</p>
@@ -592,6 +667,7 @@ export default function Home() {
                   alt={`${selectedMember.name}'s profile`}
                   fill
                   className={modalStyles.modalImage}
+                  quality={95}
                 />
               </div>
               <h3 className={modalStyles.modalTitle}>{selectedMember.name}</h3>
@@ -683,47 +759,7 @@ export default function Home() {
                 )}
               </div>
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Contact Modal */}
-      {contactMember && (
-        <div
-          className={modalStyles.modalOverlay}
-          onClick={() => setContactMember(null)}
-        >
-          <div
-            className={modalStyles.modal}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className={modalStyles.closeButton}
-              onClick={() => setContactMember(null)}
-            >
-              ×
-            </button>
-            <div className={modalStyles.modalHeader}>
-              <div className={modalStyles.modalImageContainer}>
-                <Image
-                  src={contactMember.image}
-                  alt={contactMember.name}
-                  fill
-                  className={modalStyles.modalImage}
-                />
-              </div>
-              <div className={modalStyles.modalInfo}>
-                <h3>{contactMember.name}</h3>
-                <p className={modalStyles.modalRole}>
-                  {contactMember.description}
-                </p>
-              </div>
-            </div>
-
-            <div
-              className={modalStyles.modalContent}
-              style={{ paddingTop: "1rem" }}
-            >
+            <div className={modalStyles.modalSection}>
               <h4>Kontakt informasjon</h4>
               <div className={modalStyles.contactInfo}>
                 <div className={modalStyles.contactItem}>
@@ -735,9 +771,9 @@ export default function Home() {
                   >
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
-                  <span>{contactMember.email}</span>
+                  <span>{selectedMember.email}</span>
                 </div>
-                {contactMember.phone && contactMember.phone.trim() !== "" && (
+                {selectedMember.phone && selectedMember.phone.trim() !== "" && (
                   <div className={modalStyles.contactItem}>
                     <svg
                       width="20"
@@ -747,7 +783,7 @@ export default function Home() {
                     >
                       <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" />
                     </svg>
-                    <span>{contactMember.phone}</span>
+                    <span>{selectedMember.phone}</span>
                   </div>
                 )}
               </div>

@@ -25,9 +25,9 @@
 
 .infoCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 174, 255, 0.15);
-  border-color: rgba(0, 174, 255, 0.4);
-  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 174, 255, 0.08) 100%);
+  box-shadow: 0 20px 40px rgba(0, 208, 132, 0.15);
+  border-color: rgba(0, 208, 132, 0.4);
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 208, 132, 0.08) 100%);
 }
 
 .infoIcon {
@@ -96,9 +96,9 @@
 
 .teamMember:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 174, 255, 0.2);
-  border-color: rgba(0, 174, 255, 0.4);
-  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 174, 255, 0.08) 100%);
+  box-shadow: 0 20px 40px rgba(0, 208, 132, 0.2);
+  border-color: rgba(0, 208, 132, 0.4);
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 208, 132, 0.08) 100%);
 }
 
 .memberImageContainer {
@@ -115,6 +115,8 @@
 .memberImage {
   object-fit: cover;
   transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .teamMember:hover .memberImage {
@@ -194,7 +196,7 @@
 }
 
 .contactIcon {
-  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(180deg) brightness(119%) contrast(119%);
+  filter: brightness(0) saturate(100%) invert(65%) sepia(98%) saturate(386%) hue-rotate(103deg) brightness(98%) contrast(103%);
   transition: transform 0.3s ease;
 }
 
