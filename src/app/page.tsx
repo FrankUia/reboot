@@ -160,8 +160,8 @@ export default function Home() {
           href: "https://github.com/JonAarebakk/Gruppe6_kartverket",
         },
       ],
-      praksisplasser: ["Bedrift A", "Bedrift B"],
-      teknologier: ["Teknologi 1", "Teknologi 2", "Teknologi 3"],
+      praksisplasser: ["La Famiglia - Utvikle ny nettside"],
+      teknologier: ["PostgreSQL", "C#", "Python", "PHP", "MVC ASP.NET"],
     },
   ];
 
