@@ -23,7 +23,6 @@ interface TeamMember {
 
 export default function Home() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
-  const [contactMember, setContactMember] = useState<TeamMember | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [modalImageIndex, setModalImageIndex] = useState<number | null>(null);
 
@@ -244,6 +243,8 @@ export default function Home() {
                     alt={`${member.name}'s profile`}
                     fill
                     className={cardStyles.memberImage}
+                    quality={95}
+                    priority
                   />
                 ) : (
                   <div className={cardStyles.memberImage}>
@@ -289,7 +290,7 @@ export default function Home() {
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setContactMember(member);
+                    setSelectedMember(member);
                   }}
                   className={cardStyles.socialLink}
                   title="Kontakt informasjon"
@@ -315,6 +316,8 @@ export default function Home() {
                       alt={`${member.name}'s profile`}
                       fill
                       className={cardStyles.memberImage}
+                      quality={95}
+                      priority
                     />
                   ) : (
                     <div className={cardStyles.memberImage}>
@@ -360,7 +363,7 @@ export default function Home() {
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      setContactMember(member);
+                      setSelectedMember(member);
                     }}
                     className={cardStyles.socialLink}
                     title="Kontakt informasjon"
@@ -555,6 +558,7 @@ export default function Home() {
                   alt={`${selectedMember.name}'s profile`}
                   fill
                   className={modalStyles.modalImage}
+                  quality={95}
                 />
               </div>
               <h3 className={modalStyles.modalTitle}>{selectedMember.name}</h3>
@@ -603,36 +607,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      )}
 
-      {/* Contact Modal */}
-      {contactMember && (
-        <div className={modalStyles.modalOverlay} onClick={() => setContactMember(null)}>
-          <div className={modalStyles.modal} onClick={(e) => e.stopPropagation()}>
-            <button
-              className={modalStyles.closeButton}
-              onClick={() => setContactMember(null)}
-            >
-              ×
-            </button>
-            <div className={modalStyles.modalHeader}>
-              <div className={modalStyles.modalImageContainer}>
-                <Image
-                  src={contactMember.image}
-                  alt={contactMember.name}
-                  fill
-                  className={modalStyles.modalImage}
-                />
-              </div>
-              <div className={modalStyles.modalInfo}>
-                <h3>{contactMember.name}</h3>
-                <p className={modalStyles.modalRole}>{contactMember.description}</p>
-              </div>
-            </div>
-            
-            <div className={modalStyles.modalContent} style={{ paddingTop: '1rem' }}>
+            <div className={modalStyles.modalSection}>
               <h4>Kontakt informasjon</h4>
               <div className={modalStyles.contactInfo}>
                 <div className={modalStyles.contactItem}>
@@ -644,9 +620,9 @@ export default function Home() {
                   >
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                   </svg>
-                  <span>{contactMember.email}</span>
+                  <span>{selectedMember.email}</span>
                 </div>
-                {contactMember.phone && contactMember.phone.trim() !== "" && (
+                {selectedMember.phone && selectedMember.phone.trim() !== "" && (
                   <div className={modalStyles.contactItem}>
                     <svg
                       width="20"
@@ -656,7 +632,7 @@ export default function Home() {
                     >
                       <path d="M19.23 15.26l-2.54-.29c-.61-.07-1.21.14-1.64.57l-1.84 1.84c-2.83-1.44-5.15-3.75-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52c-.12-1.01-.97-1.77-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z"/>
                     </svg>
-                    <span>{contactMember.phone}</span>
+                    <span>{selectedMember.phone}</span>
                   </div>
                 )}
               </div>
