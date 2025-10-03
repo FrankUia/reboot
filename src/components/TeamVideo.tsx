@@ -18,7 +18,7 @@ export default function TeamVideo() {
         border: "1px solid var(--border-color)"
       }}>
         <iframe
-          src="https://drive.google.com/file/d/18jQHlf95cbUYuS4TbZCNjgiMvsEWX6Gq/preview"
+          src="https://drive.google.com/file/d/1vzvK2f2OzThhaHWJ329nfBKhIKDIeNx6/view"
           width="100%"
           height="100%"
           style={{
