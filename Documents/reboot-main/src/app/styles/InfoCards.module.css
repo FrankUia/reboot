@@ -1,0 +1,226 @@
+/* Info Cards Component Styles */
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.infoCard {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.infoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 208, 132, 0.15);
+  border-color: rgba(0, 208, 132, 0.4);
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 208, 132, 0.08) 100%);
+}
+
+.infoIcon {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoCard:hover .infoIcon svg {
+  transform: scale(1.1);
+}
+
+.infoCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.infoCard p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Team Cards Specific Styles */
+.teamContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamContainer .row2 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teamMember {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.teamMember:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 208, 132, 0.2);
+  border-color: rgba(0, 208, 132, 0.4);
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(0, 208, 132, 0.08) 100%);
+}
+
+.memberImageContainer {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.memberImage {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.teamMember:hover .memberImage {
+  transform: scale(1.05);
+}
+
+.memberName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.memberDescription {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(240, 246, 252, 0.1);
+  border: 1px solid rgba(240, 246, 252, 0.2);
+  border-radius: 50%;
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.socialLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(240, 246, 252, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.socialLink:hover {
+  background: rgba(240, 246, 252, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.socialLink:hover::before {
+  left: 100%;
+}
+
+.socialLink svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.socialLink:hover svg {
+  transform: scale(1.1);
+}
+
+.contactIcon {
+  filter: brightness(0) saturate(100%) invert(65%) sepia(98%) saturate(386%) hue-rotate(103deg) brightness(98%) contrast(103%);
+  transition: transform 0.3s ease;
+}
+
+.socialLink:hover .contactIcon {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .infoCards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .infoCard {
+    padding: 1.5rem;
+  }
+
+  .teamContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .teamContainer .row2 {
+    grid-template-columns: 1fr;
+  }
+}
