@@ -1,0 +1,109 @@
+/* Sidebar Component Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(10, 15, 28, 0.95);
+  backdrop-filter: blur(8px);
+  border-right: 1px solid var(--border-color);
+  z-index: 10;
+}
+
+.sidebarContent {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarNavigation {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  margin-top: 2rem;
+}
+
+.scrollProgress {
+  width: 8px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progressBar {
+  width: 100%;
+  height: 15%;
+  min-height: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+  transition: height 0.2s ease;
+  position: relative;
+}
+
+.sidebarBrand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.sidebarLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebarLink:hover {
+  color: var(--accent);
+  background: rgba(240, 246, 252, 0.1);
+}
+
+.sidebarLink.active {
+  color: var(--accent);
+  background: rgba(240, 246, 252, 0.15);
+}
+
+.sidebarLink.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 0 3px 3px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+}
